@@ -68,7 +68,7 @@ class HomeActivity : BaseActivity(),View.OnClickListener {
 
     private fun getUserAccount(){
 
-        Log.d("getUserAccount",": " )
+
 
         Api.getRetrofit().create(GameApi::class.java).getUser().enqueue(object : retrofit2.Callback<GameApi.User>{
             override fun onResponse(call: Call<GameApi.User>?, response: Response<GameApi.User>?) {

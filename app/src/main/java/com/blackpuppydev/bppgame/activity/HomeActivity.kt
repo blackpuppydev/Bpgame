@@ -72,7 +72,7 @@ class HomeActivity : BaseActivity(),View.OnClickListener {
 
         Api.getRetrofit().create(GameApi::class.java).getUser().enqueue(object : retrofit2.Callback<GameApi.User>{
             override fun onResponse(call: Call<GameApi.User>?, response: Response<GameApi.User>?) {
-                Log.d("getUserAccount","User : " + response?.body()?.lastName)
+                Log.d("getUserAccount","User : " + response?.body()?.name)
             }
 
             override fun onFailure(call: Call<GameApi.User>?, t: Throwable?) {
